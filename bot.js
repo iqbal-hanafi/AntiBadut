@@ -2,7 +2,7 @@
 
 const { Client } = require('discord.js-selfbot-v13');
 const { GuildData, TOKEN } = require('./config.js')
-console.log(TOKEN, GuildData)
+
 const client = new Client({
    checkUpdate: false
 })
