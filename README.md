@@ -33,7 +33,7 @@ credit <a href="https://github.com/hxr404/Discord-Console-hacks">hxr404</a>
 
 ## GuildData
 ```nodejs
-GildData <Array> {
+GildData <Object> {
    'Robot': ....,
    'Guild Name': {
       channel: {
