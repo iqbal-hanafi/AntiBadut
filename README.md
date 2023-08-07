@@ -28,7 +28,7 @@ credit <a href="https://github.com/hxr404/Discord-Console-hacks">hxr404</a>
    setting your `GuildData` and `TOKEN`
    ```bash
    $ npm install . -y
-   $ npm bot.js
+   $ node bot.js
    ```
 
 ## GuildData
