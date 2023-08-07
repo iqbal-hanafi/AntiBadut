@@ -1,71 +1,11 @@
 // * by scp1337 * //
 
 const { Client } = require('discord.js-selfbot-v13');
-const randQuoteOnePiece = require('./quote.js')
-
-const TOKEN = '<your token>'
-
-/*** how to get token?
-     patse this code to your console in browser
-
-     window.webpackChunkdiscord_app.push([
-        [Math.random()],
-        {},
-        req => {
-          for (const m of Object.keys(req.c)
-            .map(x => req.c[x].exports)
-            .filter(x => x)) {
-            if (m.default && m.default.getToken !== undefined) {
-              return copy(m.default.getToken());
-            }
-            if (m.getToken !== undefined) {
-              return copy(m.getToken());
-            }
-          }
-        },
-      ]);
-      console.log('%cWorked!', 'font-size: 50px');
-      console.log(`%cYou now have your token in the clipboard!`, 'font-size: 16px');
-
-      Credit: (https://github.com/hxr404/Discord-Console-hacks)
-***/
-
+const { GuildData, TOKEN } = require('./config.js')
+console.log(TOKEN, GuildData)
 const client = new Client({
    checkUpdate: false
 })
-
-/***
-GildData {
-   'Robot': ....,
-   'Guild Name': {
-      channel: {
-         'channel name': {
-            repeat: true, // or false
-            reply: true, // or false
-            bakuReply: 'Guild Name', // example: 'Robot' for use from this msg reply in this and repeat -> Robot -> msg -> this guild -> msg -> Robot 🔄 
-            firstMsg: 'msg', // or function () => {}
-         }
-      }
-   }
-}
-
-***/
-
-const GuildData = {
-   'Space Nation': {
-      channel: {
-         'gm': {
-            repeat: true,
-            firstMsg: 'gm'
-         },
-         'bahasa': {
-            reply: true,
-            repeat: true,
-            firstMsg: randQuoteOnePiece,
-         }
-      }
-   }
-}
 
 var siapDireply = {}
 var intervals = {}
