@@ -40,7 +40,7 @@ GildData <Object> {
          'channel name': {
             repeat: true, // or false
             reply: true, // or false
-            bakuReply: 'Guild Name', // example: 'Robot' for use from this >
+            bakuReply: 'Guild Name', // example: 'Robot' for use from this Robot > msg > ThisGuild > reply > Robot 🔄
             firstMsg: 'msg', // or function () => {}
          }
       }
