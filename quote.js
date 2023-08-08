@@ -10,7 +10,7 @@ async function _getQuotesOnePiece(){
       request.get('https://onepiece.fandom.com/id/wiki/Kumpulan_Kata_Bijak_dan_Mutiara', async (e,r,body) => {
          if(!body)
             return resv(await _getQuotesOnePiece())
-         var names = body.matchAll(/(?<=\<p\>\<b\>)(?:[A-Za-z]+)(?=\<\/b\>)/g)
+         var names = body.matchAll(/(?<=\<p\>\<b\>)(?:[A-Za-z0-9.\s-]+)(?=\<\/b\>)/g)
          var quotes = {}
          for(nama of names){
             var quoteList = (body.match(new RegExp(`(?<=${nama[0]}\<\/b\>\n</p>)(.*?)(?=\<\/ul\>)`,'ims'))[0])
